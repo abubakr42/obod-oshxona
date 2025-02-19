@@ -89,3 +89,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
+
+
+const video = document.getElementById("intro-video");
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        video.pause(); // Pause video when user leaves the tab
+    } else {
+        video.play(); // Resume video when user returns
+    }
+});
+
+// Optional: Pause video when it scrolls out of view and resume when back in view
+document.addEventListener("scroll", () => {
+    const videoSection = document.getElementById("video-section");
+    const rect = videoSection.getBoundingClientRect();
+    
+    if (rect.top >= window.innerHeight || rect.bottom <= 0) {
+        video.pause(); // Pause when video is out of view
+    } else {
+        video.play(); // Resume when video is in view
+    }
+});
