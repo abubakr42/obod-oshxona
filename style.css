@@ -1,4 +1,4 @@
-/* General Styles */
+/* ===================== GENERAL ===================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -7,12 +7,13 @@ body {
     color: #ffd700; /* Gold text color */
 }
 
+/* ===================== HEADER ===================== */
 header {
-    background-color: #333; /* Dark gray header */
-    color: #ffd700; /* Gold text color */
+    background-color: #333; 
+    color: #ffd700; 
     padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #ffd700; /* Gold border */
+    border-bottom: 2px solid #ffd700; 
     position: relative;
 }
 
@@ -22,9 +23,7 @@ header img {
     border-radius: 50%;
 }
 
-
-
-
+/* ===================== SEARCH ===================== */
 .search-container {
     display: flex;
     align-items: center;
@@ -60,53 +59,17 @@ header img {
     background-color: #555;
 }
 
+.search-btn:active {
+    transform: scale(0.95);
+}
+
 .search-icon {
     font-size: 20px;
     color: gold;
     display: block;
 }
 
-/* Optional: Add animation */
-.search-btn:active {
-    transform: scale(0.95);
-}
-
-
-
-/* Adjust the menu for mobile view */
-#menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    display: none;
-    cursor: pointer;
-    z-index: 1001; /* Ensure the button is clickable */
-}
-
-#menu {
-    list-style-type: none;
-    padding: 0;
-    z-index: 1001; /* Ensure the menu is on top */
-}
-
-/* Video Section */
-#video-section {
-    display: none; /* Hide the video until the loading screen is gone */
-    background-color: #000;
-    text-align: center;
-    padding: 20px 0;
-}
-
-#intro-video {
-    width: 95%;
-    height: auto;
-    max-width: 1000px;
-    border: 2px solid #ffd700; /* Gold border */
-    border-radius: 10px;
-}
-
-
+/* ===================== NAVBAR ===================== */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -121,32 +84,33 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffd700; /* Gold text color */
+    color: #ffd700; 
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Menu button for responsive design */
+/* Menu toggle for small screens */
 #menu-toggle {
-    display: none; /* Hidden by default */
+    display: none;
     background-color: #333;
     color: #ffd700;
     border: 2px solid #ffd700;
     padding: 10px;
     cursor: pointer;
     font-size: 18px;
+    z-index: 1001;
 }
 
-/* Responsive adjustments */
+/* Responsive Nav */
 @media (max-width: 768px) {
     #menu-toggle {
-        display: inline-block; /* Show the menu button on smaller screens */
+        display: inline-block;
     }
 
     nav ul {
         flex-direction: column;
         align-items: flex-end;
-        display: none; /* Hide the menu initially */
+        display: none;
         position: absolute;
         right: 0;
         top: 100%;
@@ -161,33 +125,35 @@ nav ul li a {
     }
 
     nav ul.show {
-        display: flex; /* Show the menu when the button is pressed */
+        display: flex;
     }
 }
 
+/* ===================== HERO SECTION ===================== */
 .hero-section {
-    background-image: url('hero.jpg'); /* Add a hero image */
+    background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
     text-align: center;
-    color: #ffd700; /* Gold text color */
+    color: #ffd700;
 }
 
 .hero-section h2 {
     font-size: 32px;
 }
 
+/* ===================== MENU SECTIONS ===================== */
 .menu-section {
     padding: 30px 20px;
     text-align: center;
-    background-color: #222; /* Dark background */
+    background-color: #222;
 }
 
 .menu-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #ffd700; /* Gold text color */
+    color: #ffd700;
 }
 
 .menu-section img {
@@ -196,7 +162,7 @@ nav ul li a {
     max-width: 400px;
 }
 
-.menu-grid {
+.menu-grid, .menugrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -204,8 +170,8 @@ nav ul li a {
 }
 
 .menu-item {
-    background-color: #333; /* Dark card background */
-    border: 1px solid #ffd700; /* Gold border */
+    background-color: #333;
+    border: 1px solid #ffd700;
     border-radius: 8px;
     overflow: hidden;
     width: 100%;
@@ -222,43 +188,17 @@ nav ul li a {
 .menu-item h3 {
     font-size: 20px;
     margin: 15px;
-    color: #ffd700; /* Gold text color */
+    color: #ffd700;
 }
 
 .menu-item p {
     font-size: 14px;
-    color: #ddd; /* Light gray text */
-    margin: 0 15px 15px 15px;
+    color: #ddd;
+    margin: 0 15px 15px;
 }
 
 .menu-item:hover {
     transform: scale(1.05);
-}
-
-/* Menu Sections */
-.menugrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.menu-sections {
-    padding: 30px 20px;
-    border-bottom: 1px solid #555;
-    text-align: center;
-}
-
-.menu-sections img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-.menu-sections li img {
-    width: 80px;
-    height: 60px;
-    border-radius: 15px;
 }
 
 .section-img {
@@ -269,6 +209,12 @@ nav ul li a {
     display: block;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-sections {
+    padding: 30px 20px;
+    border-bottom: 1px solid #555;
+    text-align: center;
 }
 
 .menu-sections ul {
@@ -289,12 +235,10 @@ nav ul li a {
     font-weight: bold;
 }
 
-
-
-/* Delivery Section */
+/* ===================== DELIVERY SECTION ===================== */
 .delivery-section {
-    background: #8B0000; /* Qizil fon */
-    color: #ffd700; /* Gold text color */
+    background: #8B0000;
+    color: #ffd700;
     text-align: center;
     padding: 30px 20px;
     margin-top: 40px;
@@ -306,7 +250,7 @@ nav ul li a {
 .delivery-container i {
     font-size: 50px;
     margin-bottom: 10px;
-    color: gold; /* oltin rang */
+    color: gold;
     animation: bounce 2s infinite;
 }
 
@@ -320,7 +264,6 @@ nav ul li a {
     opacity: 0.9;
 }
 
-/* Animations */
 @keyframes slideIn {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -331,119 +274,113 @@ nav ul li a {
     50% { transform: translateY(-8px); }
 }
 
-/* Responsive Media Queries */
+/* Responsive Delivery */
 @media (max-width: 768px) {
-    .delivery-container h2 {
-        font-size: 22px;
-    }
-    .delivery-container p {
-        font-size: 16px;
-    }
-    .delivery-container i {
-        font-size: 40px;
-    }
+    .delivery-container h2 { font-size: 22px; }
+    .delivery-container p { font-size: 16px; }
+    .delivery-container i { font-size: 40px; }
 }
 
 @media (max-width: 480px) {
-    .delivery-section {
-        padding: 20px 10px;
-    }
-    .delivery-container h2 {
-        font-size: 20px;
-    }
-    .delivery-container p {
-        font-size: 14px;
-    }
-    .delivery-container i {
-        font-size: 35px;
-    }
+    .delivery-section { padding: 20px 10px; }
+    .delivery-container h2 { font-size: 20px; }
+    .delivery-container p { font-size: 14px; }
+    .delivery-container i { font-size: 35px; }
 }
 
-
-
-
-
-/* Footer Section */
+/* ===================== FOOTER ===================== */
 .footer-section {
-    background-color: #333; /* Dark gray background */
-    color: #ffd700; /* Gold text color */
+    background-color: #333;
+    color: #ffd700;
     padding: 20px;
     text-align: center;
-    border-top: 2px solid #ffd700; /* Gold border */
+    border-top: 2px solid #ffd700;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: gold;
 }
 
 .footer-section i {
     margin-right: 5px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
-.footer-section a {
-    color: #ffd700; /* Gold color for the Instagram icon */
+/* Manzil ro'yxati */
+.address-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.address-list li {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #fff;
+}
+
+.address-list i {
+    color: gold;
+    margin-right: 6px;
+}
+
+/* Social links */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     text-decoration: none;
+    color: inherit;
 }
 
-.footer-section a:hover {
-    color: #ffdd57; /* Lighter gold on hover */
+.social-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
 }
 
-/* Loading Screen Styles */
+/* ===================== LOADING SCREEN ===================== */
 #loading-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark background */
-    color: #ffd700; /* Gold text color */
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffd700;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* Ensure it's above all other content */
+    z-index: 9999;
 }
 
-/* Loader Animation */
 .loader {
-    border: 8px solid #333; /* Dark gray */
-    border-top: 8px solid #ffd700; /* Gold */
+    border: 8px solid #333;
+    border-top: 8px solid #ffd700;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
 }
 
-/* Spinner Animation */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Loading Text Style */
 .loading-text {
-    margin-top: 10px; /* Space between spinner and text */
+    margin-top: 10px;
     font-size: 20px;
-    color: #ffd700; /* Gold text color */
+    color: #ffd700;
 }
 
-/* Responsive text and layout */
+/* ===================== RESPONSIVE TEXT ===================== */
 @media (max-width: 480px) {
-    .hero-section h2 {
-        font-size: 24px;
-    }
-
-    .menu-section h2 {
-        font-size: 24px;
-    }
-
-    .menu-item h3 {
-        font-size: 18px;
-    }
-
-    .menu-item p {
-        font-size: 14px;
-    }
-
-    .dish-name {
-        font-size: 16px;
-    }
+    .hero-section h2 { font-size: 24px; }
+    .menu-section h2 { font-size: 24px; }
+    .menu-item h3 { font-size: 18px; }
+    .menu-item p { font-size: 14px; }
+    .dish-name { font-size: 16px; }
 }
